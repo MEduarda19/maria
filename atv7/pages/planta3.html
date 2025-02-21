@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goiabeira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/plantas.css">
+</head>
+<body>
+    <header>
+        <img src="../icons/outralogo.png" alt="Logo" class="logo">
+        <nav class="menu-lateral">
+            <div class="btn-expandir">
+                <i class="bi bi-list"></i>
+            </div>
+            <ul>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-person-circle"></i></span>
+                        <span class="texto">Maria Eduarda</span>
+                    </a>
+                </li>
+                <li class="item-menu drop-hover">
+                    <a href="#" class="menu-toggle">
+                        <span class="icon"><i class="bi bi-flower2"></i></span>
+                        <span class="texto">Plantas Cadastradas</span>
+                    </a>
+                    <ul class="drop">
+                        <li><a href="planta1.html" class="submenu">Planta 1</a></li>
+                        <li><a href="planta2.html" class="submenu">Planta 2</a></li>
+                        <li><a href="planta3.html" class="submenu">Planta 3</a></li>
+                        <li><a href="planta4.html" class="submenu">Planta 4</a></li>
+                        <li><a href="planta5.html" class="submenu">Planta 5</a></li>
+                        <li><a href="planta6.html" class="submenu">Planta 6</a></li>
+                    </ul>
+                </li>
+                <li class="item-menu">
+                    <a href="./cadPlantas.html">
+                        <span class="icon"><i class="bi bi-plus-circle"></i></span>
+                        <span class="texto">Cadastrar</span>
+                    </a>
+                </li>
+                    <li class="item-menu">
+                        <a href="main.html">
+                            <span class="icon"><i class="bi bi-bookmark-star-fill"></i></span>
+                            <span class="texto">Principal</span>
+                        </a>
+                    </li>
+                </li>
+                <li class="item-menu">
+                    <a href="../index.html">
+                        <span class="icon"><i class="bi bi-house-door-fill"></i></span>
+                        <span class="texto">Início</span>
+                    </a>
+                </li>                            
+                <li class="item-menu">
+                    <a href="../pages/pesquisas.html">
+                        <span class="icon"><i class="bi bi-book"></i></span>
+                        <span class="texto">Projetos</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-telephone-fill"></i></span>
+                        <span class="texto">Contatos</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>GOIABEIRA</h1>
+    <section1> 
+        <div class="card card3">
+            <img src="../assets/goiabeira2.jpg" alt="Goiabeira">
+            <h2>Psidium guajava</h2>
+            <p>  
+                A goiabeira, ou Psidium guajava, é uma árvore frutífera de pequeno a médio porte, amplamente apreciada e cultivada em diversas regiões de clima tropical. Caracteriza-se por seu tronco tortuoso, cuja casca lisa e descamante confere à árvore um aspecto rústico e singular. Suas folhas, de formato oval e de um verde intenso, são densamente dispostas e desempenham um papel vital na fotossíntese, contribuindo para o vigor e a produção de frutos.
+                Originária da América Tropical, a goiabeira é nativa de regiões que abrangem o Brasil, México, Caribe e outras áreas de clima similar. Essa ampla distribuição se deve à sua adaptabilidade a diferentes tipos de solo e condições climáticas, permitindo que seja cultivada e naturalizada em diversos países tropicais e subtropicais ao redor do mundo.
+                É fundamental manter suas folhas com coloração verde vibrante e livres de manchas, o que indica uma boa nutrição e ausência de infestações. A planta pode ser afetada por pragas como as cochonilhas, que, se não controladas, comprometem a saúde da folhagem e a qualidade dos frutos.
+            </p>    
+            <button class="botao">
+                <a href="https://en.wikipedia.org/wiki/Psidium_guajava" target="_blank">VER MAIS</a>
+            </button>
+        </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggles = document.querySelectorAll(".menu-toggle");
+        
+            toggles.forEach(toggle => {
+                toggle.addEventListener("click", function(event) {
+                    event.preventDefault(); // Evita redirecionamento do link
+                    
+                    const dropMenu = this.nextElementSibling; // Seleciona o submenu correspondente
+                    
+                    // Fecha todos os outros submenus antes de abrir o clicado
+                    document.querySelectorAll(".drop").forEach(menu => {
+                        if (menu !== dropMenu) {
+                            menu.classList.remove("active");
+                        }
+                    });
+        
+                    dropMenu.classList.toggle("active");
+                });
+            });
+        
+            // Fecha o submenu ao clicar fora
+            document.addEventListener("click", function(event) {
+                if (!event.target.closest(".drop-hover")) {
+                    document.querySelectorAll(".drop").forEach(menu => {
+                        menu.classList.remove("active");
+                    });
+                }
+            });
+        });
+        </script>
+    <aside id="contatos-aside" class="aside-contatos">
+        <div class="aside-content">
+            <span id="close-aside" class="close-btn">&times;</span>
+            <h2>Entre em Contato</h2>
+            <p>Email: botanica@projeto.com</p>
+            <p>Telefone: (63) 4002-8922</p>
+            <p>Redes sociais: @botanica_ambiental</p>
+        </div>
+    </aside>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contatosLink = document.querySelector('.item-menu a .bi-telephone-fill').parentElement; 
+            const asideContatos = document.getElementById("contatos-aside");
+            const closeAside = document.getElementById("close-aside");
+    
+            contatosLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                asideContatos.classList.toggle("active");
+            });
+    
+            closeAside.addEventListener("click", function () {
+                asideContatos.classList.remove("active");
+            });
+    
+            document.addEventListener("click", function (event) {
+                if (!asideContatos.contains(event.target) && !contatosLink.contains(event.target)) {
+                    asideContatos.classList.remove("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

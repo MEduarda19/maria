@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jambolão</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/plantas.css">
+</head>
+<body>
+    <header>
+        <img src="../icons/outralogo.png" alt="Logo" class="logo">
+        <nav class="menu-lateral">
+            <div class="btn-expandir">
+                <i class="bi bi-list"></i>
+            </div>
+            <ul>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-person-circle"></i></span>
+                        <span class="texto">Maria Eduarda</span>
+                    </a>
+                </li>
+                <li class="item-menu drop-hover">
+                    <a href="#" class="menu-toggle">
+                        <span class="icon"><i class="bi bi-flower2"></i></span>
+                        <span class="texto">Plantas Cadastradas</span>
+                    </a>
+                    <ul class="drop">
+                        <li><a href="planta1.html" class="submenu">Planta 1</a></li>
+                        <li><a href="planta2.html" class="submenu">Planta 2</a></li>
+                        <li><a href="planta3.html" class="submenu">Planta 3</a></li>
+                        <li><a href="planta4.html" class="submenu">Planta 4</a></li>
+                        <li><a href="planta5.html" class="submenu">Planta 5</a></li>
+                        <li><a href="planta6.html" class="submenu">Planta 6</a></li>
+                    </ul>
+                </li>
+                <li class="item-menu">
+                    <a href="./cadPlantas.html">
+                        <span class="icon"><i class="bi bi-plus-circle"></i></span>
+                        <span class="texto">Cadastrar</span>
+                    </a>
+                </li>
+                    <li class="item-menu">
+                        <a href="main.html">
+                            <span class="icon"><i class="bi bi-bookmark-star-fill"></i></span>
+                            <span class="texto">Principal</span>
+                        </a>
+                    </li>
+                </li>
+                <li class="item-menu">
+                    <a href="../index.html">
+                        <span class="icon"><i class="bi bi-house-door-fill"></i></span>
+                        <span class="texto">Início</span>
+                    </a>
+                </li>                            
+                <li class="item-menu">
+                    <a href="../pages/pesquisas.html">
+                        <span class="icon"><i class="bi bi-book"></i></span>
+                        <span class="texto">Projetos</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-telephone-fill"></i></span>
+                        <span class="texto">Contatos</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>JAMBOLÃO</h1>
+    <section1> 
+        <div class="card card5">
+            <img src="../assets/jambolao2.jpg" alt="Jiboia">
+            <h2>Syzygium cumini</h2>
+            <p>  
+                A Syzygium cumini é uma árvore tropical de porte médio a grande, amplamente reconhecida por seus frutos comestíveis e por seu valor ornamental e medicinal. Seus frutos, inicialmente verdes, amadurecem para uma coloração que varia do roxo escuro ao quase negro, revelando uma polpa suculenta, levemente adstringente e aromática. A árvore também se destaca por sua copa densa, folhas brilhantes e formato elegante, características que a tornam popular em pomares, jardins e projetos paisagísticos em regiões tropicais e subtropicais.
+                Uma árvore saudável de Syzygium cumini exibe folhas de um verde vibrante, sem manchas ou sinais de infestação, e frutos íntegros, livres de pragas. Apesar de sua robustez, a espécie pode ser suscetível a doenças fúngicas e a pragas como a broca do fruto. Práticas de manejo integrado – que incluem controle de pragas, irrigação adequada e nutrição equilibrada – são fundamentais para manter a saúde e a produtividade da árvore.
+            </p>
+            <button class="botao">
+                <a href="https://sites.unipampa.edu.br/programaarborizacao/jambolao/" target="_blank">VER MAIS</a>
+            </button>
+        </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggles = document.querySelectorAll(".menu-toggle");
+        
+            toggles.forEach(toggle => {
+                toggle.addEventListener("click", function(event) {
+                    event.preventDefault(); // Evita redirecionamento do link
+                    
+                    const dropMenu = this.nextElementSibling; // Seleciona o submenu correspondente
+                    
+                    // Fecha todos os outros submenus antes de abrir o clicado
+                    document.querySelectorAll(".drop").forEach(menu => {
+                        if (menu !== dropMenu) {
+                            menu.classList.remove("active");
+                        }
+                    });
+        
+                    dropMenu.classList.toggle("active");
+                });
+            });
+        
+            // Fecha o submenu ao clicar fora
+            document.addEventListener("click", function(event) {
+                if (!event.target.closest(".drop-hover")) {
+                    document.querySelectorAll(".drop").forEach(menu => {
+                        menu.classList.remove("active");
+                    });
+                }
+            });
+        });
+        </script>
+    <aside id="contatos-aside" class="aside-contatos">
+        <div class="aside-content">
+            <span id="close-aside" class="close-btn">&times;</span>
+            <h2>Entre em Contato</h2>
+            <p>Email: botanica@projeto.com</p>
+            <p>Telefone: (63) 4002-8922</p>
+            <p>Redes sociais: @botanica_ambiental</p>
+        </div>
+    </aside>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contatosLink = document.querySelector('.item-menu a .bi-telephone-fill').parentElement; 
+            const asideContatos = document.getElementById("contatos-aside");
+            const closeAside = document.getElementById("close-aside");
+    
+            contatosLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                asideContatos.classList.toggle("active");
+            });
+    
+            closeAside.addEventListener("click", function () {
+                asideContatos.classList.remove("active");
+            });
+    
+            document.addEventListener("click", function (event) {
+                if (!asideContatos.contains(event.target) && !contatosLink.contains(event.target)) {
+                    asideContatos.classList.remove("active");
+                }
+            });
+        });
+    </script>   
+</body>
+</html>
